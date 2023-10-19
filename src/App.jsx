@@ -8,8 +8,8 @@ import { useState } from "react";
 
 function App() {
   const [user, setUser] = useState(null);
-  document.body.style.backgroundColor = "#b0abb3";
-  document.body.style.color = "#F2F2F2";
+  document.body.style.backgroundColor = "#f2f2f2";
+
   return (
     <>
       <Helmet>

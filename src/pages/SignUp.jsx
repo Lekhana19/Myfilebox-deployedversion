@@ -15,10 +15,14 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { CognitoUser, CognitoUserAttribute } from "amazon-cognito-identity-js";
 import { Navigate } from "react-router-dom";
 import userpool from "../utils/userpool";
+import axios from "axios";
+import constants from "../utils/constants";
 // import { Password } from "@mui/icons-material";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
   const [password, setPassword] = useState("");
   const [verifyProcess, setVerifyProcess] = useState(false);
   const [OTP, setOTP] = useState("");
@@ -62,6 +66,19 @@ export default function SignUp() {
         // Navigate("/files");
       }
     });
+    axios
+      .post(constants.BASE_URL + constants.PATHS.CREATE_ACCOUNT, {
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        password: password,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
@@ -95,6 +112,8 @@ export default function SignUp() {
               <TextField
                 autoComplete="given-name"
                 name="firstName"
+                value={firstname}
+                onChange={(e) => setFirstname(e.target.value)}
                 required
                 fullWidth
                 id="firstName"
@@ -109,6 +128,8 @@ export default function SignUp() {
                 id="lastName"
                 label="Last Name"
                 name="lastName"
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value)}
                 autoComplete="family-name"
               />
             </Grid>

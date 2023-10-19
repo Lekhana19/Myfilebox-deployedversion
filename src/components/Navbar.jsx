@@ -45,7 +45,7 @@ function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography variant="h6" noWrap>
-            FileManager
+            Myfilebox
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -93,7 +93,7 @@ function NavBar() {
               textDecoration: "none",
             }}
           >
-            Filango
+            Myfilebox
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
           {user ? (
