@@ -63,7 +63,6 @@ function SignIn() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          color: "#FFF",
         }}
       ></Box>
       <Box
@@ -72,7 +71,6 @@ function SignIn() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          color: "#FFF",
         }}
       >
         <Typography component="h1" variant="h5">
