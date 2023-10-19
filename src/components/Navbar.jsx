@@ -99,7 +99,7 @@ function NavBar() {
           {user ? (
             <div style={{ display: "flex", alignItems: "center" }}>
               <Box mx={2} sx={{ flexGrow: 0 }}>
-                <Typography variant="p">Lekhana</Typography>
+                <Typography variant="p"></Typography>
                 {/* <Avatar /> */}
               </Box>
 
