@@ -16,6 +16,7 @@ import EditPage from "./pages/EditPage";
 import CreatePage from "./pages/CreatePage";
 import AdminPage from "./pages/AdminPage";
 import DeletePage from "./pages/DeletePage";
+import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
   {
@@ -52,9 +53,14 @@ const router = createBrowserRouter([
         element: <SignIn />,
       },
       {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
         path: "signup/",
         element: <SignUp />,
       },
+      
     ],
   },
 ]);
